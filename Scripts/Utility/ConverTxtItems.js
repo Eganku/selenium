@@ -1,5 +1,5 @@
 const {Builder, By, Actions, Key, until, } = require('selenium-webdriver');
-const ExtractPage = require('./ExtractArray.page.js');
+const ExtractPage = require('./Page/ExtractArray.page.js');
 const Readfile = require('../Page/readfile.page.js');
 
 const XLSX = require('xlsx')
