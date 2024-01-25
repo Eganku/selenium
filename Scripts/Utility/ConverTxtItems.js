@@ -1,5 +1,18 @@
 const {Builder, By, Actions, Key, until, } = require('selenium-webdriver');
-const ExtractPage = require('./Page/ExtractArray.page.js');
+
+const HomePage = require('../Page/home.page.js');
+const ReviewUserPage = require('../Page/review.user.page.js');
+const DemoUserPage = require('../Page/demo.user.page.js');
+const LinkerMenu = require('../Page/linkermenu.page.js');
+const FunctionsPage = require('../Page/functions.page.js');
+const StamGegevensPage = require('../Page/stamgegevens.page.js');
+const divconfirm = require('../Page/divconfirm.page.js');
+const divalert = require('../Page/divalert.page.js');
+const BoekingsProgramma = require('../Financieel/Boekingprogram.page.js');
+const BTWaangifte = require('../Financieel/BTWaangifte.page.js');
+const Bankieren = require('../Financieel/bankieren.page.js');
+const ExtractPage = require('../Page/ExtractArray.page.js');
+const kolom = require('../Page/Kolommentest.page.js');
 const Readfile = require('../Page/readfile.page.js');
 
 const XLSX = require('xlsx')
@@ -7,8 +20,14 @@ async function example(){
 
 console.log("=> => excel test <= <=");
 
-const Closefile = await ExtractPage.FileInlezen('path\\..\\selenium\\Menutest\\Sluitknoppen.txt')
-console.log(Closefile)
+const fs = require('fs');
+
+
+var file = 'path\\..\\selenium\\Menutest\\Sluitknoppen.txt'
+
+var ingelezen = fs.readFileSync(file, 'utf8').split('\r\n')       
+// const Closefile = await Readfile.FileInlezen('path\\..\\selenium\\Menutest\\Sluitknoppen.txt')
+console.log(ingelezen)
 return 
 
 

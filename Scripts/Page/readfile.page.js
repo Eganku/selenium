@@ -6,12 +6,12 @@ var BasePage = require('./base.page.js');
 
 class ReadfilePage extends BasePage{
        
-    async FileInlezen(file) { 
+    async FileInlezen(file){ 
         var ingelezen = [];
         try {
             var ingelezen = fs.readFileSync(file, 'utf8').split('\r\n')       
         } catch (err) {
-            console.error("ERROR file niet ingelezen" +file);
+            console.error("ERROR file niet ingelezen " +file);
             return false
         }
         return ingelezen
