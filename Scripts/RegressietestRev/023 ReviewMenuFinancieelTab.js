@@ -6,7 +6,8 @@ async function example(){
     "demo set "
     // await DemoUserPage.wing(555);
     "rev set bundels."
-    await ReviewUserPage.wingman(350);
+    await ReviewUserPage.beheer(350);
+    // await ReviewUserPage.wingman(350);
     // await ReviewUserPage.wingbasis(350);
     "dev set betalenperadm"
     // await ReviewUserPage.wingacc(555);
